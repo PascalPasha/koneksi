@@ -14,13 +14,15 @@ namespace koneksi
             new Program().Koneksi();
         }
 
-        public void Koneksi()
+        public void Koneksi() //method koneksi
         {
             using (
                 SqlConnection con = new SqlConnection("data source = (Sesuai dengan server name masing - masing) ;" +
                 "database=ProdiTI;User Id=sa;Password= (Sesuai dengan Password SQL Authentfication masing - masing)")
                 )
+
             {
+                
                 con.Open();
                 Console.WriteLine("Koneksi Success");
             }
